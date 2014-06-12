@@ -10,5 +10,7 @@
 dist/*
 target/
 
+*bookSample/
+
 #ignore vim backup files
 *~
