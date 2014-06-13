@@ -12,5 +12,7 @@ target/
 
 *bookSample/
 
+
 #ignore vim backup files
 *~
+*.swp
