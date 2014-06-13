@@ -1,19 +1,25 @@
 object ComputeUnicodeSum {
 
-  // exercise 6
-  def calcProduct(s: String) : Long = {
+  def calcProductForeach(s: String) : Long = {
+      var product : Long = 1
+ 
+      s.foreach( (f : Char) => product *= f.toLong  )
+      product
+   } 
+
+  def calcProductForApply(s: String) : Long = {
+      var product : Long = 1
+  
+      for (i <- 0 until s.length) {
+        product *= s(i).toLong
+      }
+
+      product
+   } 
+
+  def calcProductFor(s: String) : Long = {
     var product : Long = 1
   
-    /* check this further, as it's odd that this does work
-    for (i <- 0 until s.length)
-      println(i)
-      var a = s.apply(i)
-      //println(a)
-      //println(a.toLong)
-      //product *= s(i).toLong()
-      product
-      */
-   
       for (c <- s)
           product *= c
 
@@ -34,11 +40,20 @@ object ComputeUnicodeSum {
 
   def main(args: Array[String]) = {
     
-    val prod = calcProduct("Hello")
-    println(formatResult("Hello", prod))
+    var prod = calcProdRecursive("Hello", 1)
+    println(formatResult("Recursive: Hello", prod))
 
-    val rProd = calcProdRecursive("Hello", 1)
-    println(formatResult("Hello", rProd))
-
+    prod = 0
+    prod = calcProductFor("Hello")
+    println(formatResult("For      : Hello", prod))
+    
+    prod = 0
+    prod = calcProductForApply("Hello")
+    println(formatResult("For Apply: Hello", prod))
+    
+    prod = 0
+    prod = calcProductForeach("Hello")
+    println(formatResult("Foreach  : Hello", prod))
+    
   }
 }
