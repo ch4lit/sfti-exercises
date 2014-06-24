@@ -1,3 +1,5 @@
+package com.sfti.exercises.ch2
+
 object ComputePow {
 
     /* computes X^n where X is an integer

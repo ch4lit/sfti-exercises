@@ -1,4 +1,4 @@
-package com.sfti.execises.ch2
+package com.sfti.exercises.ch2
 
 object Loops {
 

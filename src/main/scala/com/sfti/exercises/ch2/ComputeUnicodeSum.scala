@@ -1,3 +1,5 @@
+package com.sfti.exercises.ch2
+
 object ComputeUnicodeSum {
 
   def calcProductForeach(s: String) : Long = {
