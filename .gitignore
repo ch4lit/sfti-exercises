@@ -9,6 +9,8 @@
 *.log
 dist/*
 target/
+project/
+.DS_Store
 
 *bookSample/
 
